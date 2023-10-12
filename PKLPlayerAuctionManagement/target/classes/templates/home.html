@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PKL Player Auction Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        
+        .header {
+            background-color:darkgreen;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+        }
+
+        .team-box {
+            border: 1px solid #ccc;
+            padding: 20px;
+            text-align: center;
+            margin: 20px;
+            background-color: #f9f9f9;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            transition: transform 0.2s;
+        }
+
+        .team-box:hover {
+            transform: scale(1.05);
+        }
+        
+        .team-name {
+            font-size: 24px;
+            margin-top: 10px;
+            color: rgb(245, 33, 10);
+        }
+        
+        .team-description {
+            font-size: 16px;
+            margin-top: 10px;
+            color: #555;
+        }
+
+        .container {
+            margin-top: 30px;
+        }
+        
+        body {
+			background-color: powderblue;
+		}
+    </style>
+</head>
+<body>
+    <!-- Navbar Content-->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-bg-light">
+        <div class="container"> 
+            <a class="navbar-brand mx-auto" href="#">
+				<img src="images/PKL.jpg" style="height:70px; width:70px;"/>
+				<b>PKL Player Auction Management</b></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/players/list">Player List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container">
+        <div class="header">Welcome to the PKL Player Auction Management</div>
+        <br>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Bengal Warriors</h4>
+                    <p class="team-description">Titles Won:1</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Patna Pirates</h4>
+                    <p class="team-description">Titles Won:3</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Bengaluru Bulls</h4>
+                    <p class="team-description">Titles Won:1</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Dabang Delhi KC</h4>
+                    <p class="team-description">Titles Won:1</p>
+                </div>
+            </div>
+        </div>
+         <div class="row">
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Gujarat Giants</h4>
+                    <p class="team-description">Titles Won:0</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Haryana Steelers</h4>
+                    <p class="team-description">Titles Won:0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Jaipur Pink Panthers</h4>
+                    <p class="team-description">Titles Won:2</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Puneri Paltan</h4>
+                    <p class="team-description">Titles Won:0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Tamil Thalaivas</h4>
+                    <p class="team-description">Titles Won:0</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">Telugu Titans</h4>
+                    <p class="team-description">Titles Won:0</p>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">U Mumba</h4>
+                    <p class="team-description">Titles Won:1</p>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="team-box">
+                    <h4 class="team-name">UP Yoddha</h4>
+                    <p class="team-description">Titles Won:0</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

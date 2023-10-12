@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>PKL Player Auction Management</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        .header {
+            background-color: rgb(245, 33, 10);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            font-size: 28px;
+        }
+
+        .form-group {
+            margin-bottom: 20px;
+        }
+
+        label {
+            font-weight: bold;
+        }
+
+        .form-control-sm {
+            height: 30px; 
+            padding: 5px 10px; 
+            font-size: 14px; 
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-secondary {
+            background-color: #6c757d;
+            border-color: #6c757d;
+        }
+        
+        body {
+			background-color: powderblue;
+		}
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-light navbar-bg-light">
+        <div class="container"> 
+            <a class="navbar-brand mx-auto" href="#">
+				<img src="/images/PKL.jpg" style="height:70px; width:70px;"/>
+				<b>PKL Player Auction Management</b></a> 
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto"> 
+                    <li class="nav-item">
+                        <a class="nav-link" href="/">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/players/list">Player List</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="header">Add New Player</div>
+        <form method="post" th:object="${player}" th:action="@{/players/add}">
+            <br>
+            <div class="form-group">
+                <label for="playerName">Player Name:</label>
+                <input type="text" class="form-control form-control-sm" id="playerName" th:field="*{playerName}" required>
+            </div>
+            <div class="form-group">
+                <label for="previousTeam">Previous Team:</label>
+                <input type="text" class="form-control form-control-sm" id="previousTeam" th:field="*{previousTeam}" required>
+            </div>
+            <div class="form-group">
+                <label for="newTeam">New Team:</label>
+                <input type="text" class="form-control form-control-sm" id="newTeam" th:field="*{newTeam}" required>
+            </div>
+            <div class="form-group">
+                <label for="soldForAmount">Sold for Amount:</label>
+                <input type="text" class="form-control form-control-sm" id="soldForAmount" th:field="*{soldForAmount}" required>
+            </div>
+            <div class="form-group">
+                <label for="designation">Designation:</label>
+                <input type="text" class="form-control form-control-sm" id="designation" th:field="*{designation}" required>
+            </div>
+            <button type="submit" class="btn btn-success">Add</button>
+            <a class="btn btn-secondary" href="/players/list">Back to List</a>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
